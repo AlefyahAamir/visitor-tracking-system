@@ -1,0 +1,8 @@
+OSNet / Torchreid architecture
+Copyright (c) Kaiyang Zhou
+Source: https://github.com/KaiyangZhou/deep-person-reid
+License: MIT
+
+The VisitorTrackingSystem project includes a standalone inference-only adaptation
+of the OSNet x0.25 architecture so the application does not need to import the
+full torchreid package at runtime.

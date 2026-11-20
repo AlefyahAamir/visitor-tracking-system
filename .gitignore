@@ -1,0 +1,32 @@
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local data and confidential configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.log
+
+# Models downloaded on first run
+models/*.pt
+models/*.pth
+*.pt
+*.pth
+
+# CCTV media, identities, and analysis output
+output/
+outputs/
+crops/
+snapshots/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.csv
+*.jsonl

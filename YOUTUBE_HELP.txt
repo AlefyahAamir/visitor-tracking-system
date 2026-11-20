@@ -1,0 +1,22 @@
+YOUTUBE SOURCE HELP
+===================
+
+1. In either Draw regions or Run analysis, choose Source type: YouTube URL.
+2. Paste one of these forms:
+   https://www.youtube.com/watch?v=VIDEO_ID
+   https://youtu.be/VIDEO_ID
+   https://www.youtube.com/shorts/VIDEO_ID
+   A public YouTube live-stream URL
+3. Click Load first frame or Start analysis.
+
+The app resolves the YouTube page using yt-dlp, then passes the direct media
+stream to OpenCV. It does not scrape frames from the browser page.
+
+Common failures:
+- Company firewall blocks YouTube or googlevideo.com.
+- Video is private, members-only, sign-in-only, age-restricted, or unavailable.
+- YouTube changed its extractor behavior; run run_app.bat again to update yt-dlp.
+- The live stream has ended or has no playable format.
+
+For long recorded footage, an uploaded local video file is still the most stable
+source because temporary YouTube media URLs can expire during very long runs.

@@ -1,0 +1,20 @@
+RTSP / NETWORK STREAM TROUBLESHOOTING
+=====================================
+
+The app needs a DIRECT video stream URL, for example:
+  rtsp://username:password@192.168.1.50:554/Streaming/Channels/101
+  https://server.example/live/camera.m3u8
+
+A normal browser page such as https://example.com/camera-viewer is not a video
+stream and OpenCV cannot open it.
+
+If the first frame cannot be loaded:
+1. Confirm the laptop is on the same LAN/VPN as the CCTV recorder or camera.
+2. Test the exact URL in VLC: Media > Open Network Stream.
+3. Confirm the username, password, IP, port, channel and stream path.
+4. Try TCP first. If the device requires it, try UDP.
+5. Ask IT to allow the RTSP port (commonly 554, but it can be different).
+6. For an API, make sure the response gives a direct stream URL, not a webpage.
+
+The app now tries both the FFmpeg and default OpenCV backends and reports a
+clearer failure message.
